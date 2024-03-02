@@ -1,5 +1,5 @@
 db.createRole({
-  role: "admin_mflix",
+  role: "admin",
   privileges: [
     { resource: { db: "db_mflix", collection: "" }, actions: ["createCollection", "dropCollection"] },
     { resource: { db: "db_mflix", collection: "" }, actions: ["insert", "find", "update", "remove"] },
@@ -12,7 +12,7 @@ db.createRole({
 
 
 db.createRole({
-  role: "user_mflix",
+  role: "user",
   privileges: [
     { resource: { db: "db_mflix", collection: "films" }, actions: ["find"] },
     { resource: { db: "db_mflix", collection: "comments" }, actions: ["insert", "remove"] }
@@ -22,7 +22,7 @@ db.createRole({
 
 
 db.createRole({
-  role: "manager_mflix",
+  role: "manager",
   privileges: [
     { resource: { db: "db_mflix", collection: "users" }, actions: ["find"] },
     { resource: { db: "db_mflix", collection: "films" }, actions: ["find", "update", "remove"] },
@@ -35,19 +35,19 @@ db.createRole({
 db.createUser({
   user: "admin_user",
   pwd: "admin_password",
-  roles: [{ role: "admin_mflix", db: "db_mflix" }]
+  roles: [{ role: "admin", db: "db_mflix" }]
 });
 
 
 db.createUser({
   user: "normal_user",
   pwd: "normal_password",
-  roles: [{ role: "user_mflix", db: "db_mflix" }]
+  roles: [{ role: "user", db: "db_mflix" }]
 });
 
 
 db.createUser({
   user: "manager_user",
   pwd: "manager_password",
-  roles: [{ role: "manager_mflix", db: "db_mflix" }]
+  roles: [{ role: "manager", db: "db_mflix" }]
 });
