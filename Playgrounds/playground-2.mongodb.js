@@ -36,7 +36,7 @@ db.movies.find({ "genre": { $size: 3 } });
 
 // 10
 use("db_mflix")
-db.movies.find({ "genre.2": "Drama" });
+db.movies.find({ "genre.2": "Drama" }) ;
 
 // 11
 use("db_mflix")
