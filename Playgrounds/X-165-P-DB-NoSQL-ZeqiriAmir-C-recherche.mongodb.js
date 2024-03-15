@@ -88,7 +88,10 @@ db.movies.find({}, { title: 1, year: 1, _id: 0 })
 use("db_mflix")
 db.movies.find().skip(20).limit(10)
 
-// 23. Rechercher les films qui ont au moins la langue « française » ou la langue « anglaise » disponible, qui sont sortis à partir de « 1980 » inclus, et qui ont une note « Rotten Tomatoe » de plus de 4 ou un score « IMDB » supérieur ou égal à 8. Nous voulons également que « Brad Pitt » joue dans le film. Nous souhaitons n'avoir que les titres pour pouvoir les afficher directement. Enfin, nous ne voulons pas que le « synopsis » du film parle de « nazis ».
+// 23. Rechercher les films qui ont au moins la langue « française » ou la langue « anglaise » disponible,
+//     qui sont sortis à partir de « 1980 » inclus, et qui ont une note « Rotten Tomatoe » de plus de 4 ou un score « IMDB » supérieur ou égal à 8.
+//     Nous voulons également que « Brad Pitt » joue dans le film. Nous souhaitons n'avoir que les titres pour pouvoir les afficher directement. Enfin,
+//     nous ne voulons pas que le « synopsis » du film parle de « nazis ».
 use("db_mflix")
 db.movies.aggregate([
     {
