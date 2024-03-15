@@ -75,7 +75,6 @@ db.movies.find({ cast: 'Brad Pitt', num_mflix_comments: { $gte: 100 } })
 // 19. où l’acteur principal est une « femme »
 use("db_mflix")
 
-
 // 20. où « Tom Hanks » est acteur, mais pas « réalisateur »
 use("db_mflix")
 db.movies.find({ cast: 'Tom Hanks', directors: { $exists: false } })
