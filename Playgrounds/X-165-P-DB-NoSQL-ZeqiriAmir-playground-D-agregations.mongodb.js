@@ -103,7 +103,7 @@ db.movies.aggregate([
 
 // 15. Notre objectif est de créer des groupes par pays. Pour chaque pays,
 //     nous voulons créer des groupes de chaque genre et obtenir le nombre de films,
-//     la note moyenne des films et la part de marché (nombre de films d'un genre pour un pays / total de films du pays)
+//     la note moyenne des films et la part de marché (nombre de films d'un genre pour un pays / total de films du pays) (Aide de l'intelligence artificielle)
 use("db_mflix")
 db.movies.aggregate([
     { $unwind: "$countries" },
